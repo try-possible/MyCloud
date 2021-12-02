@@ -1,0 +1,19 @@
+server:
+  port: 8060  #当前 Eureka Server 服务端⼝
+spring:
+  application:
+    name: hystrix  #当前服务注册在 Eureka Server 上的名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  #注册中⼼的访问地址
+  instance:
+    prefer-ip-address: true  #是否将当前服务的 IP 注册到 Eureka Server
+feign:
+  hystrix:
+    enabled: true  #是否开启熔断器
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'  #通过节点 hystrix.stream 监控数据

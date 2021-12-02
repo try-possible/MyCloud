@@ -1,0 +1,18 @@
+server:
+  port: 8888  #当前 Eureka Server 服务端⼝
+spring:
+  application:
+    name: configserver  #当前服务注册在 Eureka Server 上的名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/try-possible/springcloud.git
+          search-paths: config
+          username: try-possible
+          password: 951208tr
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  #注册中心的访问地址

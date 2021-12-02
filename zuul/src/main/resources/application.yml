@@ -1,0 +1,12 @@
+server:
+  port: 8030  #当前 Eureka Server 服务端⼝
+spring:
+  application:
+    name: gateway  #当前服务注册在 Eureka Server 上的名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  #注册中⼼的访问地址
+zuul:
+  routes:
+    provider: /p/**  #给服务提供者 provider 设置映射

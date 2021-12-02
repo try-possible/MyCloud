@@ -1,0 +1,15 @@
+# 项目排除路径
+/configclient/target/
+/configserver/target/
+/consumer/target/
+/eurekaclient/target/
+/eurekaserver/target/
+/feigh/target/
+/hystrix/target/
+/nativeconfigclient/target/
+/nativeconfigserver/target/
+/resttemplate/target/
+/ribbon/target/
+/zipkin/target/
+/zipkinclient/target/
+/zuul/target/
